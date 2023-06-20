@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Sign In/ Sign Up</title>
+    </head>
+    <body id="signIn-body">   
+        <nav id="nav">
+            <span class="logo">
+                <i class="fa-solid fa-burger"></i>
+                Akira Burger
+            </span>
+            <ul>
+                <li class="navs" ><a href="home.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li class="navs" id="menu-btn"><a href="menu.html"><i class="fa-solid fa-bars"></i> Menu</a>
+                    <ul id="nav-category" class="nav-category display">
+                        <li><a href="menu.html#burgers"><i class="fa-solid fa-burger"></i> Humburger</a></li>
+                        <li><a href="menu.html#hotdogs"><i class="fa-solid fa-hotdog"></i> Hot Dog</a></li>
+                        <li><a href="menu.html#fried-chickens"><i class="fa-solid fa-drumstick-bite"></i> Fried Chicken</a></li>
+                        <li><a href="menu.html#drinks"><i class="fa-solid fa-glass-water"></i> Drinks</a></li>
+                    </ul>    
+                </li>
+                <li class="navs"><a href="about-us.html">About Us</a></li>
+                <li class="navs"><a href="contact-us.html">Contact Us</a></li>
+                <li class="navs"><a href="review.html">Review</a></li>
+                <li class="navs"><a href="service.html">Service</a></li>
+                <li class="navs"><a href="faq.html">FAQ</a></li>
+                <li class="navs"><a href="myCart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <li class="navs active"><a href="#signIn-body">Sign In</a></li>
+            </ul>
+        </nav>
+        <div id="sign-in-body">
+        <form  class="sign-in-form" id="sign-in-form">
+            <div class="sign-in-container">
+                <div class="text-light">
+                    <h2><i class="fa-solid fa-user-lock"></i> Sign In Form</h2>
+                </div>
+                <div class="username-container">
+                    <label><i class="fa-solid fa-user"></i> Name</label>
+                    <input type="text" required>
+                </div>
+                <div class="password-container">
+                    <label><i class="fa-solid fa-key"></i> Password</label>
+                    <input type="password" required>
+                </div>
+                <span class="sign-in-btn">
+                    <input type="submit" value="Sign In">
+                </span>
+                <span class="sign-up-btn" id="sign-up-btn">
+                    <a href="#">Sign Up</a>
+                </span>
+            </div>
+        </form>
+        <form  class="sign-up-form display" id="sign-up-form">
+            <div class="sign-up-container">
+                <div class="text-light">
+                    <h2><i class="fa-solid fa-user-lock"></i> Sign Up Form</h2>
+                </div>
+                <div class="username-container">
+                    <label><i class="fa-solid fa-user"></i> Name</label>
+                    <input type="text" required>
+                </div>
+                <div class="password-container">
+                    <label><i class="fa-solid fa-key"></i> Password</label>
+                    <input type="password" required>
+                    <label><i class="fa-solid fa-key"></i> Confirm Password</label>
+                    <input type="password" required>
+                </div>
+                <span class="sign-up-btn">
+                    <input type="submit" value="Sign Up">
+                </span>
+                <span class="sign-in-btn" id="sign-in-btn">
+                    <a href="#">Sign In</a>
+                </span>
+            </div>
+        </form>
+    </div>
+    <span id="top-btn">
+        <a href="#review-body"><i class="fa-solid fa-circle-arrow-up"></i></a>
+   </span>
+   <footer>
+    <div class="footer-container">
+        <h2>Kurosawa</h2>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta eos ea labore sit quas ullam aut harum earum obcaecati quia, est commodi repellendus nisi aliquid ipsum consectetur deserunt dicta eius?lo
+        </p>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <div>developed by Kurosawa</div>
+    </div>
+</footer>
+   <script>  
+        const navs = document.getElementsByClassName("navs")
+        for(let i=0; i<navs.length; i++){
+            navs[i].addEventListener("click",()=>{
+                const current = document.getElementsByClassName("active")
+                current[0].classList.remove("active")
+                navs[i].classList.add("active")
+            })
+        }
+
+        const top_btn = document.getElementById("top-btn")
+        const nav_hide = document.getElementById("nav")
+        window.addEventListener("scroll",()=>{
+            if (window.pageYOffset > 150){
+                top_btn.style.opacity = 1
+            }else{
+                top_btn.style.opacity = 0
+            }
+        })      
+
+        const sign_up_form = document.getElementById("sign-up-form")
+        const sign_in_form = document.getElementById("sign-in-form")
+        const sign_up_btn = document.getElementById("sign-up-btn")
+        const sign_in_btn = document.getElementById("sign-in-btn")
+
+        sign_up_btn.addEventListener("click",()=>{
+            sign_up_form.classList.remove("display")
+            sign_in_form.classList.add("display")
+        })
+
+        sign_in_btn.addEventListener("click",()=>{
+            sign_in_form.classList.remove("display")
+            sign_up_form.classList.add("display")
+        })
+
+   </script>
+    </body>
+</html>

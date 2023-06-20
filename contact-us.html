@@ -1,0 +1,96 @@
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <title>Contact Us</title>
+        </head>
+        <body id="contact-us-body">
+            <nav id="nav">
+                <span class="logo">
+                    <i class="fa-solid fa-burger"></i>
+                    Akira Burger
+                </span>
+                <ul>
+                    <li class="navs" ><a href="home.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li class="navs" id="menu-btn"><a href="menu.html"><i class="fa-solid fa-bars"></i> Menu</a>
+                        <ul id="nav-category" class="nav-category display">
+                            <li><a href="menu.html#burgers"><i class="fa-solid fa-burger"></i> Humburger</a></li>
+                            <li><a href="menu.html#hotdogs"><i class="fa-solid fa-hotdog"></i> Hot Dog</a></li>
+                            <li><a href="menu.html#fried-chickens"><i class="fa-solid fa-drumstick-bite"></i> Fried Chicken</a></li>
+                            <li><a href="menu.html#drinks"><i class="fa-solid fa-glass-water"></i> Drinks</a></li>
+                        </ul>
+                    </li>
+                    <li class="navs"><a href="about-us.html">About Us</a></li>
+                    <li class="navs  active"><a href="#contact-us-body">Contact Us</a></li>
+                    <li class="navs"><a href="review.html">Review</a></li>
+                    <li class="navs"><a href="service.html">Service</a></li>
+                    <li class="navs"><a href="faq.html">FAQ</a></li>
+                    <li class="navs"><a href="myCart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                    <li class="navs"><a href="sign-in.html">Sign In</a></li>
+                </ul>
+            </nav>
+            <div class="section-1">
+                <h1>GET IN TOUCH</h1>
+                <div class="content">
+                    <div class="items">
+                        <span class="icons"><i class="fa-solid fa-location-dot"></i></span>
+                        <h3>ADDRESS</h3>
+                        <p>
+                            Akira Burger is conveniently located in Hlaing Township, Yangon, Myanmar. Our address is 123 ABC Street, situated in the heart of this vibrant city. Nestled among bustling streets and surrounded by a lively atmosphere, our burger shop is easily accessible to both locals and visitors alike. Whether you're exploring the city or looking for a quick and satisfying meal, we invite you to visit us at Akira Burger. Experience the mouthwatering flavors, friendly service, and cozy ambiance that await you at our prime location in Yangon.</p>
+                    </div>
+                    <div class="items">
+                        <span class="icons"><i class="fa-solid fa-phone"></i></span>
+                        <h3>Phone</h3>
+                        <p>Contact us at Akira Burger for any inquiries, orders, or reservations. You can reach us at 09-79144437 via phone or Viber. Our dedicated team is ready to assist you with any questions you may have regarding our menu, services, or special requests. Whether you prefer to call or message us, we are committed to providing prompt and helpful responses to ensure a smooth and enjoyable experience. Don't hesitate to get in touch with us at 09-79144437 for all your burger cravings or to satisfy your appetite for delicious food. We look forward to serving you!</p>
+                    </div>
+                    <div class="items">
+                        <span class="icons"><i class="fa-solid fa-envelope"></i></span>
+                        <h3>Email</h3>
+                        <p>
+                            For any correspondence, inquiries, or feedback, please feel free to reach out to us via email at htetarkarlevi@gmail.com. We value your input and strive to provide the best possible customer service. Whether you have questions about our menu, want to inquire about catering options, or simply want to share your dining experience with us, our team is here to assist you. We aim to respond to all emails in a timely manner, ensuring that your concerns are addressed and your questions are answered. Your satisfaction is our top priority, and we appreciate the opportunity to serve you. Contact us at htetarkarlevi@gmail.com and let us know how we can assist you further.</p>
+                    </div>
+                </div>
+            </div>
+            <span id="top-btn">
+                <a href="#review-body"><i class="fa-solid fa-circle-arrow-up"></i></a>
+        </span>
+        <footer>
+            <div class="footer-container">
+                <h2>Kurosawa</h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta eos ea labore sit quas ullam aut harum earum obcaecati quia, est commodi repellendus nisi aliquid ipsum consectetur deserunt dicta eius?lo
+                </p>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <div>developed by Kurosawa</div>
+            </div>
+        </footer>
+        <script>
+                const navs = document.getElementsByClassName("navs")
+                for(let i=0; i<navs.length; i++){
+                    navs[i].addEventListener("click",()=>{
+                        const current = document.getElementsByClassName("active")
+                        current[0].classList.remove("active")
+                        navs[i].classList.add("active")
+                    })
+                }
+
+                const top_btn = document.getElementById("top-btn")
+                const nav_hide = document.getElementById("nav")
+                window.addEventListener("scroll",()=>{
+                    if (window.pageYOffset > 150){
+                        top_btn.style.opacity = 1
+                    }else{
+                        top_btn.style.opacity = 0
+                    }
+                })  
+            </script>
+        </body>
+    </html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Service</title>
+    </head>
+    <body id="service-body">
+        <nav id="nav">
+            <span class="logo">
+                <i class="fa-solid fa-burger"></i>
+                Akira Burger
+            </span>
+            <ul>
+                <li class="navs" ><a href="home.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li class="navs" id="menu-btn"><a href="menu.html"><i class="fa-solid fa-bars"></i> Menu</a>
+                    <ul id="nav-category" class="nav-category display">
+                        <li><a href="menu.html#burgers"><i class="fa-solid fa-burger"></i> Humburger</a></li>
+                        <li><a href="menu.html#hotdogs"><i class="fa-solid fa-hotdog"></i> Hot Dog</a></li>
+                        <li><a href="menu.html#fried-chickens"><i class="fa-solid fa-drumstick-bite"></i> Fried Chicken</a></li>
+                        <li><a href="menu.html#drinks"><i class="fa-solid fa-glass-water"></i> Drinks</a></li>
+                    </ul>
+                </li>
+                <li class="navs"><a href="about-us.html">About Us</a></li>
+                <li class="navs"><a href="contact-us.html">Contact Us</a></li>
+                <li class="navs"><a href="review.html">Review</a></li>
+                <li class="navs active"><a href="#service-body">Service</a></li>
+                <li class="navs"><a href="faq.html">FAQ</a></li>
+                <li class="navs"><a href="myCart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <li class="navs"><a href="sign-in.html">Sign In</a></li>
+            </ul>
+        </nav>
+        <section class="section-1">
+            <h2>Our Services</h2>
+            <div class="content">
+                <div class="items">
+                    <h3>Pick-Up Service</h3>
+                    <p>Busy schedule? No problem. With our convenient pick-up service, you can place your order ahead of time and swing by our restaurant to collect it. Skip the wait and enjoy the convenience of picking up your favorite burgers, hot dogs, and drinks without any hassle.</p>
+                </div>
+                <div class="items">
+                    <h3>Delivery</h3>
+                    <p>Our deli service allows you to enjoy our delicious offerings at your convenience. Simply place your order, and our efficient staff will have it carefully prepared and packaged, ready for you to pick up. Enjoy our delectable burgers and sides wherever you desire, whether it's a picnic in the park or a cozy night at home.</p>
+                </div>
+                <div class="items">
+                    <h3>Friendly Staf</h3>
+                    <p>At Akira Burger, we believe that outstanding service goes hand in hand with exceptional food. Our friendly and attentive staff is always ready to assist you, ensuring that your dining experience is pleasant and memorable. Whether you have special dietary requests or need recommendations from our menu, our staff is here to make your visit enjoyable and hassle-free.</p>
+                </div>
+                <div class="items">
+                    <h3>Customizable Options</h3>
+                    <p>We understand that everyone has unique preferences. That's why we offer customizable options to ensure your meal is tailored to your liking. From selecting the perfect toppings to choosing your preferred sauce, you have the freedom to create a personalized culinary masterpiece that satisfies your cravings.</p> 
+                </div>
+                <div class="items">
+                    <h3>Clean and Inviting Environment</h3>
+                    <p>We take great pride in maintaining a clean and inviting environment for our customers. Our restaurant is thoughtfully designed to provide a comfortable and welcoming atmosphere, allowing you to relax and savor your meal. We prioritize cleanliness and hygiene to ensure that your dining experience is not only delicious but also safe and enjoyable.</p>
+                </div>
+            </div>
+        </section>
+        <span id="top-btn">
+            <a href="#service-body"><i class="fa-solid fa-circle-arrow-up"></i></a>
+       </span>
+       <footer>
+        <div class="footer-container">
+            <h2>Kurosawa</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta eos ea labore sit quas ullam aut harum earum obcaecati quia, est commodi repellendus nisi aliquid ipsum consectetur deserunt dicta eius?lo
+            </p>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <div>developed by Kurosawa</div>
+        </div>
+    </footer>
+       <script>
+            const navs = document.getElementsByClassName("navs")
+            for(let i=0; i<navs.length; i++){
+                navs[i].addEventListener("click",()=>{
+                    const current = document.getElementsByClassName("active")
+                    current[0].classList.remove("active")
+                    navs[i].classList.add("active")
+                })
+            }
+
+            const top_btn = document.getElementById("top-btn")
+            const nav_hide = document.getElementById("nav")
+            window.addEventListener("scroll",()=>{
+                if (window.pageYOffset > 150){
+                    top_btn.style.opacity = 1
+                }else{
+                    top_btn.style.opacity = 0
+                }
+            })  
+        </script>
+    </body>
+</html>
